@@ -1,0 +1,6 @@
+/.vr_project
+/listings_0_VQA.csv
+/sample.json
+dataset/abo-images-small/*
+dataset/abo-listings/*
+dataset/VQA-dataset/*
