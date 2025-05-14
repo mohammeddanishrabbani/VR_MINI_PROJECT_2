@@ -3,3 +3,5 @@
 /sample.json
 dataset/abo-images-small/*
 dataset/abo-listings/*
+unsloth_compiled_cache/*
+images/*
