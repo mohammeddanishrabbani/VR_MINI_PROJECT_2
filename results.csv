@@ -1,0 +1,11 @@
+image_path,question,answer,generated_answer
+a1/a1f37cc0.jpg,What is the pattern?,Comforter,solid
+77/772f6f1f.jpg,What brand is this?,206,amazonbasics
+1d/1d3c1567.jpg,What is the brand?,Solimo,solimo
+fb/fb57539f.jpg,Is it 3D?,Yes,yes
+e0/e030ba61.jpg,What is the product type?,Grocery,shoes
+49/49b1b22b.jpg,What type of case is it?,Hard,hard
+1f/1f243ec0.jpg,What kind of shoe is it?,Running,sandal
+50/50ce84a2.jpg,What type of wash?,Handwash,body
+49/49b1b22b.jpg,What is the product's brand?,Solimo,solimo
+0f/0fc9d6c7.jpg,What is the product type?,Case,case

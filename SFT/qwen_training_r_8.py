@@ -243,7 +243,7 @@ max_memory = round(gpu_stats.total_memory / 1024 / 1024 / 1024, 3)
 print(f"GPU = {gpu_stats.name}. Max memory = {max_memory} GB.")
 print(f"{start_gpu_memory} GB of memory reserved.")
 
-checkpoint_path = 'SFT/lora_on_listing_for_qwen2/checkpoint-1280'
+# checkpoint_path = 'SFT/lora_on_listing_for_qwen2/checkpoint-1280'
 
 trainer_stats = trainer.train(resume_from_checkpoint=checkpoint_path)
 
