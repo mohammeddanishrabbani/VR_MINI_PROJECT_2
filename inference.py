@@ -22,11 +22,11 @@ def main():
     # Load model and processor, move model to GPU if available
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model, tokenizer = FastVisionModel.from_pretrained(
-    "SFT/model/qwen_qlora_4",
+    "drd01/qwen_for_abo_high_rank",
     load_in_4bit = True, # Use 4bit to reduce memory use. False for 16bit LoRA.
     use_gradient_checkpointing = "unsloth", # True or "unsloth" for long context
     )
-    # model = PeftModel.from_pretrained(model, "SFT/lora_on_listing_for_qwen2/checkpoint-9824")
+    # model = PeftModel.from_pretrained(model, "SFT/model/qwen_qlora_16")
     FastVisionModel.for_inference(model)
 
 
@@ -63,7 +63,7 @@ def main():
         answer = str(answer).split('assistant\n')[-1].lower()
         print(f"Generated answer: {answer}")
         generated_answers.append(answer)
-
+    # model.push_to_hub("drd01/qwen_for_abo_high_rank")
     # model.save_pretrained(f"SFT/model/qwen_qlora_4")  # Local saving
     # tokenizer.save_pretrained(f"SFT/model/qwen_qlora_4")
     df["generated_answer"] = generated_answers
