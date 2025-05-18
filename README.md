@@ -105,8 +105,8 @@ The task of data curation involved generating a high-quality Visual Question Ans
 #### Output Files
 
 - Final dataset files:
-  - `VQA-dataset-train/merged_listings_train.csv`
-  - `VQA-dataset-test/merged_listings_test.csv`
+  - `dataset/VQA-dataset-train/merged_listings_train.csv`
+  - `dataset/VQA-dataset-test/merged_listings_test.csv`
 
 ---
 
