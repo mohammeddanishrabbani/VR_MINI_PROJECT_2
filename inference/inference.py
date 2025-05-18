@@ -24,8 +24,8 @@ def main():
 
 
     generated_answers = []
-    for idx, row in tqdm(df.iterrows(), total=10):
-        image_path = f"{args.image_dir}/{row['image_path']}"
+    for idx, row in tqdm(df.iterrows(), total=len(df)):
+        image_path = f"{args.image_dir}/{row['image_name']}"
         question = f"{str(row['question'])}. Answer with one word."
         try:
             image = Image.open(image_path).convert("RGB")
