@@ -1,4 +1,41 @@
 # Multimodal Visual Question Answering using the ABO Dataset
+## Project Directory Structure
+```text
+├── Evaluation/
+│ ├── evaluation_BaselineModels.ipynb # Evaluation of baseline models
+│ └── evaluation_FinetunedModel.ipynb # Evaluation of fine-tuned models
+│
+├── Inference/
+│ ├── inference_baseline_QWEN2B.ipynb # Inference using QWEN 2B baseline
+│ └── inference_baseline_QWEN7B.ipynb # Inference using QWEN 7B baseline
+│
+├── Results/
+│ ├── results_qwen2B.csv # Output results from QWEN 2B
+│ ├── results_QWEN7B.csv # Output results from QWEN 7B
+│ ├── results_QWEN_finetuned_rank4.csv # Fine-tuned (rank 4) results
+│ └── results_QWEN_finetuned_rank16.csv # Fine-tuned (rank 16) results
+│
+├── SFT/ # Finetuning Folder
+│ ├── model/qwen_qlora_4/ # Final fine-tuned model (LoRA rank 4)
+│ ├── qwen_2.5_low_rank_checkpoints/ # Intermediate checkpoints from training
+│ ├── qwen_training_r_4.ipynb # LoRA rank 4 training notebook
+│ └── qwen_training_r_16.ipynb # LoRA rank 16 training notebook
+│
+├── dataset/ # VQA dataset and processing notebooks
+│ ├── VQA-dataset/ # Raw VQA CSVs (unsplit)
+│ ├── VQA-dataset-train/ # Training split CSVs
+│ ├── VQA-dataset-test/ # Test split CSVs
+│ ├── data_exploration.ipynb # Dataset analysis and insights
+│ ├── data_splitter.ipynb # Script for splitting dataset
+│ └── dataset_curation_*.ipynb # Curation notebooks for each listing
+│
+├── inference_script/
+│ ├── inference.py # Python script to run inference via CLI
+│ └── requirements.txt # Python environment dependencies
+│
+├── README.md # Main README file (this file)
+└── README_for_inference.md # Separate README for inference usage
+```
 
 ##  Methodology
 
@@ -153,58 +190,7 @@ These metrics allowed us to capture both literal and semantic correctness of the
 | Qwen-VL 2B (Fine-tuned)   | 16        | **48.28%**     | **0.9603**       | **0.5690**       |
 
 ---
-## Project Directory Structure
 
-```text
-├── Evaluation
-│   ├── evaluation_BaselineModels.ipynb
-│   └── evaluation_FinetunedModel.ipynb
-├── Inference
-│   ├── inference_baseline_QWEN2B.ipynb
-│   └── inference_baseline_QWEN7B.ipynb
-├── README.md
-├── Results
-│   ├── results_QWEN7B.csv
-│   ├── results_QWEN_finetuned_rank16.csv
-│   ├── results_QWEN_finetuned_rank4.csv
-│   └── results_qwen2B.csv
-├── SFT
-│   ├── model
-│   │   └── qwen_qlora_4
-│   │       ├── adapter_config.json
-│   │       ├── adapter_model.safetensors
-│   │       ├── added_tokens.json
-│   │       ├── chat_template.json
-│   │       ├── merges.txt
-│   │       ├── preprocessor_config.json
-│   │       ├── special_tokens_map.json
-│   │       ├── tokenizer.json
-│   │       ├── tokenizer_config.json
-│   │       └── vocab.json
-│   ├── qwen2-5-vl-2b-vision.ipynb
-│   ├── qwen_2.5_low_rank_checkpoints
-│   │   ├── checkpoint-9792
-│   │   │   └── [...checkpoint files...]
-│   │   └── checkpoint-9824
-│   │       └── [...checkpoint files...]
-│   ├── qwen_training.py
-│   ├── qwen_training_r_16.py
-│   └── qwen_training_r_8.py
-├── dataset
-│   ├── VQA-dataset
-│   │   └── listings_[0-f]_VQA.csv
-│   ├── VQA-dataset-test
-│   │   └── listings_[0-f]_VQA_test.csv
-│   │   └── merged_listings.csv
-│   ├── VQA-dataset-train
-│   │   └── listings_[0-f]_VQA_train.csv
-│   │   └── merged_listings.csv
-│   ├── data_exploration.ipynb
-│   ├── data_splitter.ipynb
-│   └── dataset_curation_listing_*.ipynb
-├── inference.py
-└── results.csv
-```
 
 ## **Conclusion**
 
