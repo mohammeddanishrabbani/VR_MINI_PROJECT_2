@@ -146,12 +146,11 @@ These metrics allowed us to capture both literal and semantic correctness of the
 ### Evaluation Results of Baseline vs Fine-Tuned Models
 
 | Model                     | LoRA Rank | String Match ↑ | BERTScore (F1) ↑ | WUP Similarity ↑ |
-|--------------------------|-----------|----------------|------------------|------------------|
-| Qwen-VL 2B (Baseline)     | N/A       | 31.5%          | 0.839            | 0.752            |
-| Qwen-VL 7B (Baseline)     | N/A       | 38.2%          | 0.874            | 0.791            |
-| BLIP Base (Baseline)      | N/A       | 27.6%          | 0.812            | 0.701            |
-| Qwen-VL 2B (Fine-tuned)   | **8**     | **43.4%**      | **0.897**        | **0.824**        |
-| Qwen-VL 2B (Fine-tuned)   | **16**    | **45.1%**      | **0.911**        | **0.839**        |
+|-------------------------- |-----------|----------------|------------------|------------------|
+| Qwen-VL 2B (Baseline)     | N/A       | 10.32%         | 0.9288           | 0.4123           |
+| Qwen-VL 7B (Baseline)     | N/A       | 27.10%         | 0.9122           | 0.4177           |
+| Qwen-VL 2B (Fine-tuned)   | 4         | 47.28%         | 0.9598           | 0.5740           |
+| Qwen-VL 2B (Fine-tuned)   | 16        | **48.28%**     | **0.9598**       | **0.5690**       |
 
 ---
 ## Project Directory Structure
