@@ -8,7 +8,7 @@ It takes a folder of images and a CSV file containing image names and questions,
 
 ##  Prerequisites
 
-Ensure that you have Python 3.8+ installed.
+Ensure that you have Python 3.10+ installed.
 
 Install the required packages using the provided `requirements.txt` file:
 
