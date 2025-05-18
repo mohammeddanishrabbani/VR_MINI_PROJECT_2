@@ -205,7 +205,7 @@ These metrics allowed us to capture both literal and semantic correctness of the
 │   └── dataset_curation_listing_*.ipynb
 ├── inference.py
 └── results.csv
-
+```
 
 ## **Conclusion**
 
