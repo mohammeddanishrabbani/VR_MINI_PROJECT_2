@@ -154,6 +154,40 @@ These metrics allowed us to capture both literal and semantic correctness of the
 | Qwen-VL 2B (Fine-tuned)   | **16**    | **45.1%**      | **0.911**        | **0.839**        |
 
 ---
+## Project Directory Structure
+
+├── Evaluation
+│ ├── evaluation_BaselineModels.ipynb
+│ └── evaluation_FinetunedModel.ipynb
+├── Inference
+│ ├── inference_baseline_QWEN2B.ipynb
+│ └── inference_baseline_QWEN7B.ipynb
+├── README.md
+├── Results
+│ ├── results_QWEN7B.csv
+│ ├── results_QWEN_finetuned_rank16.csv
+│ ├── results_QWEN_finetuned_rank4.csv
+│ └── results_qwen2B.csv
+├── SFT
+│ ├── model
+│ │ └── qwen_qlora_4
+│ │ └── [...model files...]
+│ ├── qwen2-5-vl-2b-vision.ipynb
+│ ├── qwen_2.5_low_rank_checkpoints
+│ │ └── [...checkpoints...]
+│ ├── qwen_training.py
+│ ├── qwen_training_r_16.py
+│ └── qwen_training_r_8.py
+├── dataset
+│ ├── VQA-dataset
+│ │ └── [...listing CSVs...]
+│ ├── VQA-dataset-test
+│ │ └── [...test CSVs...]
+│ ├── VQA-dataset-train
+│ │ └── [...train CSVs...]
+│ └── [...data curation notebooks...]
+├── inference.py
+└── results.csv
 
 ## Conclusion
 
