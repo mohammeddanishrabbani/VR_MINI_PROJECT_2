@@ -5,3 +5,5 @@ dataset/abo-images-small/*
 dataset/abo-listings/*
 unsloth_compiled_cache/*
 images/*
+qwen-16/*
+SFT/model/qwen_qlora_16/*
