@@ -57,17 +57,13 @@ image2.jpg,What type of furniture is this?
 Run the script using:
 
 ```bash
-python inference_script/inference.py \
-  --image_dir path/to/images \
-  --csv_path path/to/questions.csv
+python inference_script/inference.py --image_dir path/to/images --csv_path path/to/questions.csv
 ```
 
 Example:
 
 ```bash
-python inference_script/inference.py \
-  --image_dir ./images \
-  --csv_path ./questions.csv
+python inference_script/inference.py --image_dir ./images  --csv_path ./questions.csv
 ```
 
 ---
