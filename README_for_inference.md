@@ -1,6 +1,6 @@
 # FastVisionModel Inference Script
 
-This script performs visual question answering using the `unsloth` library's `FastVisionModel`, specifically using the `drd01/qwen_for_abo_high_rank` model.
+This script performs visual question answering using the `unsloth` library's `FastVisionModel`, specifically using the `drd01/qwen_for_abo_high_rank` model file uploaded by us on HuggingFace.
 
 It takes a folder of images and a CSV file containing image names and questions, runs inference to generate answers (as one-word responses), and outputs a new CSV (`results.csv`) with the predictions.
 
