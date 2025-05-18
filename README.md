@@ -156,40 +156,58 @@ These metrics allowed us to capture both literal and semantic correctness of the
 ---
 ## Project Directory Structure
 
+```text
 ├── Evaluation
-│ ├── evaluation_BaselineModels.ipynb
-│ └── evaluation_FinetunedModel.ipynb
+│   ├── evaluation_BaselineModels.ipynb
+│   └── evaluation_FinetunedModel.ipynb
 ├── Inference
-│ ├── inference_baseline_QWEN2B.ipynb
-│ └── inference_baseline_QWEN7B.ipynb
+│   ├── inference_baseline_QWEN2B.ipynb
+│   └── inference_baseline_QWEN7B.ipynb
 ├── README.md
 ├── Results
-│ ├── results_QWEN7B.csv
-│ ├── results_QWEN_finetuned_rank16.csv
-│ ├── results_QWEN_finetuned_rank4.csv
-│ └── results_qwen2B.csv
+│   ├── results_QWEN7B.csv
+│   ├── results_QWEN_finetuned_rank16.csv
+│   ├── results_QWEN_finetuned_rank4.csv
+│   └── results_qwen2B.csv
 ├── SFT
-│ ├── model
-│ │ └── qwen_qlora_4
-│ │ └── [...model files...]
-│ ├── qwen2-5-vl-2b-vision.ipynb
-│ ├── qwen_2.5_low_rank_checkpoints
-│ │ └── [...checkpoints...]
-│ ├── qwen_training.py
-│ ├── qwen_training_r_16.py
-│ └── qwen_training_r_8.py
+│   ├── model
+│   │   └── qwen_qlora_4
+│   │       ├── adapter_config.json
+│   │       ├── adapter_model.safetensors
+│   │       ├── added_tokens.json
+│   │       ├── chat_template.json
+│   │       ├── merges.txt
+│   │       ├── preprocessor_config.json
+│   │       ├── special_tokens_map.json
+│   │       ├── tokenizer.json
+│   │       ├── tokenizer_config.json
+│   │       └── vocab.json
+│   ├── qwen2-5-vl-2b-vision.ipynb
+│   ├── qwen_2.5_low_rank_checkpoints
+│   │   ├── checkpoint-9792
+│   │   │   └── [...checkpoint files...]
+│   │   └── checkpoint-9824
+│   │       └── [...checkpoint files...]
+│   ├── qwen_training.py
+│   ├── qwen_training_r_16.py
+│   └── qwen_training_r_8.py
 ├── dataset
-│ ├── VQA-dataset
-│ │ └── [...listing CSVs...]
-│ ├── VQA-dataset-test
-│ │ └── [...test CSVs...]
-│ ├── VQA-dataset-train
-│ │ └── [...train CSVs...]
-│ └── [...data curation notebooks...]
+│   ├── VQA-dataset
+│   │   └── listings_[0-f]_VQA.csv
+│   ├── VQA-dataset-test
+│   │   └── listings_[0-f]_VQA_test.csv
+│   │   └── merged_listings.csv
+│   ├── VQA-dataset-train
+│   │   └── listings_[0-f]_VQA_train.csv
+│   │   └── merged_listings.csv
+│   ├── data_exploration.ipynb
+│   ├── data_splitter.ipynb
+│   └── dataset_curation_listing_*.ipynb
 ├── inference.py
 └── results.csv
 
-## Conclusion
+
+## **Conclusion**
 
 - LoRA-based fine-tuning significantly improved model performance.
 - Even the compact **Qwen-VL 2B (LoRA Rank 16)** outperformed the larger **Qwen-VL 7B baseline**, showcasing the effectiveness of parameter-efficient adaptation.
@@ -197,7 +215,7 @@ These metrics allowed us to capture both literal and semantic correctness of the
 
 ---
 
-## Future Directions
+## **Future Directions**
 
 - Add **multilingual question generation** using ABO’s multilingual metadata.
 - Integrate **ranking-based loss functions** for improved discriminative training.
