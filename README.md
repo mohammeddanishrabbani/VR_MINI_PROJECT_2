@@ -83,9 +83,9 @@ To benchmark performance, we evaluated off-the-shelf VQA models on our curated d
 
 | Model         | Description                                                   |
 |---------------|---------------------------------------------------------------|
-| **Qwen-VL 7B** | Multimodal transformer with high vision-language capability.  |
-| **Qwen-VL 2B** | Smaller variant optimized for low-latency inference.          |
-| **BLIP Base**  | BLIP model trained for general VQA and captioning tasks.     |
+| **Qwen-VL 7B**| Multimodal transformer with high vision-language capability.  |
+| **Qwen-VL 2B**| Smaller variant optimized for low-latency inference.          |
+
 
 All models were evaluated in **zero-shot** or **few-shot** settings.
 
@@ -150,7 +150,7 @@ These metrics allowed us to capture both literal and semantic correctness of the
 | Qwen-VL 2B (Baseline)     | N/A       | 10.32%         | 0.9288           | 0.4123           |
 | Qwen-VL 7B (Baseline)     | N/A       | 27.10%         | 0.9122           | 0.4177           |
 | Qwen-VL 2B (Fine-tuned)   | 4         | 47.28%         | 0.9598           | 0.5740           |
-| Qwen-VL 2B (Fine-tuned)   | 16        | **48.28%**     | **0.9598**       | **0.5690**       |
+| Qwen-VL 2B (Fine-tuned)   | 16        | **48.28%**     | **0.9603**       | **0.5690**       |
 
 ---
 ## Project Directory Structure
