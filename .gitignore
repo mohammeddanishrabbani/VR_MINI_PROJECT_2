@@ -7,3 +7,6 @@ unsloth_compiled_cache/*
 images/*
 qwen-16/*
 SFT/model/qwen_qlora_16/*
+inference/.env/*
+inference/.env310/*
+inference/unsloth_compiled_cache/*
