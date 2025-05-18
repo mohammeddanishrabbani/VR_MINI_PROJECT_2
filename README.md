@@ -200,12 +200,5 @@ These metrics allowed us to capture both literal and semantic correctness of the
 
 ---
 
-## **Future Directions**
-
-- Add **multilingual question generation** using ABO’s multilingual metadata.
-- Integrate **ranking-based loss functions** for improved discriminative training.
-- Deploy the fine-tuned model for real-time product Q&A in e-commerce settings.
-
----
 
 > For code, datasets, and inference scripts, please refer to the project repository.
